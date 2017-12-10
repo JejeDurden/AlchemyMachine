@@ -20,14 +20,15 @@ app.post('/cook', function(req, res) {
     res.sendFile(__dirname + '/public/index.html');
     return;
   }
+  if (typeof req.body.ingredient === 'string') {
+    req.body.ingredient = [req.body.ingredient];
+  }
   var recipe = [];
-  var outofstock = 0;
-	for(i = 0; i < 3 ; i++) {
+	for(i = 0; i < req.body.ingredient.length ; i++) {
 		current_ingredient = req.body.ingredient[i];
     for(j = 0; j < data.Ingredients.length ; j++) {
 		  if (current_ingredient == data.Ingredients[j].name) {
         if (data.Ingredients[j].quantity == 0) {
-          outofstock++;
           break;
         }
         else {

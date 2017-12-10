@@ -1,9 +1,9 @@
 {
   "Ingredients":[
         {"name": "Hylian Rice", "quantity": 7},
-        {"name": "Hylian Shroom", "quantity": 2},
-        {"name": "Hyrule Bass", "quantity": 3},
-        {"name": "Keese Wing", "quantity": 0},
+        {"name": "Hylian Shroom", "quantity": 5},
+        {"name": "Hyrule Bass", "quantity": 4},
+        {"name": "Keese Wing", "quantity": 1},
         {"name": "Ironshroom", "quantity": 5},
         {"name": "Sneaky River Snail", "quantity": 2},
         {"name": "Swift Carrot", "quantity": 4},
