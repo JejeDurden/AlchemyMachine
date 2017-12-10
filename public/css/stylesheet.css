@@ -26,3 +26,39 @@ h1 {
   color: black;
   text-align: center;
 }
+
+.container {
+  width:100%;
+}
+
+.left {
+  float: left;
+  width: 30%;
+  padding: 15px;
+  text-align: right;
+}
+
+.recipes {
+  float: right;
+  width: 30%;
+  text-align: left;
+  padding: 15px;
+}
+
+.result {
+  margin: 0 auto;
+  text-align: center;
+  width: 30%;
+}
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+img {
+  height: 150px;
+}

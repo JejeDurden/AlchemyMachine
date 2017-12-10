@@ -3,7 +3,7 @@
         {"name": "Hylian Rice", "quantity": 7},
         {"name": "Hylian Shroom", "quantity": 2},
         {"name": "Hyrule Bass", "quantity": 3},
-        {"name": "Keese Wing", "quantity": 2},
+        {"name": "Keese Wing", "quantity": 0},
         {"name": "Ironshroom", "quantity": 5},
         {"name": "Sneaky River Snail", "quantity": 2},
         {"name": "Swift Carrot", "quantity": 4},
@@ -22,5 +22,8 @@
         {"name": "Meat and shrooms", "ingredients": ["Raw Gourmet Meat","Hearty Truffle","Hylian Shroom"], "quantity" : 0},
         {"name": "Hylian Meal", "ingredients": ["Hylian Rice","Hyrule Bass","Hylian Shroom"], "quantity" : 0},
         {"name": "Dubious Food", "ingredients": [], "quantity" : 0}
+],
+"Result": [
+  {}
 ]
 }

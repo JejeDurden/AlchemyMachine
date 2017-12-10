@@ -11,15 +11,21 @@
     <body>
       <div class="upper"></div>
       <h1>The Zelda Food Machine</h1>
-      <div>
-        <form action="/cook" method="POST">
-          <p>Please choose 3 ingredients to try to make a dish</p>
-          <div class="ingredients">
-          </div>
-          <div>
-            <button type="submit">Let's Cook !</button>
-          </div>
-        </form>
+      <div class=container>
+        <div class="left">
+          <form action="/cook" method="POST">
+            <h2>Please choose 3 ingredients to try to make a dish</h2>
+            <div class="ingredients">
+            </div>
+            <div>
+              <button type="submit">Let's Cook !</button>
+            </div>
+          </form>
+        </div>
+        <div class="recipes">
+          <h2>Here is your dishes inventory:</h2>
+        </div>
+        <div class="result"></div>
       </div>
 
       <script>
@@ -34,9 +40,42 @@
               console.log(data);
               $.each( data.Ingredients, function( i, item ) {
                 ingredient = item.name;
-                button = "<p><input type='checkbox' name='ingredient' value='" + ingredient +"'><label for='" + ingredient + "'>" + ingredient +"</label></p>";
+                quantity = item.quantity;
+                if (quantity > 0) {
+                  button = "<p><input type='checkbox' name='ingredient' value='" +
+                          ingredient +"'><label for='" + ingredient + "'>" +
+                          ingredient +" (stock: "+ quantity + ")</label></p>";
+                }
+                else {
+                  button = "<p><input type='checkbox' name='ingredient' value='" +
+                          ingredient +"'disabled><label for='" + ingredient + "'>" +
+                          ingredient +" (stock: "+ quantity + ")</label></p>";
+                }
                 $( ".ingredients" ).append(button);
               });
+              $.each( data.Dishes, function( i, item ) {
+                recipe = item.name;
+                quantity = item.quantity;
+                dish = "<p>" + recipe +" : " + quantity +" </p>";
+                $( ".recipes" ).append(dish);
+              });
+
+              $.each(data.Result, function( i, item ){
+                plate = item.name;
+                if (plate == "Dubious Food") {
+                   result = "<h4 class='failure'>Argh... You've made some dubious food. "+
+                   "Try again but watch your inventory!</h4><img src='http://i0.kym-cdn.com/photos/images/newsfeed/001/137/029/592.png'>";
+                }
+                else if (plate) {
+                    result = "<h4 class='success'>You cooked a "+ plate + ", great job !</h4>" +
+                              "<img src='https://d1u5p3l4wpay3k.cloudfront.net/zelda_gamepedia_en/7/73/BotW_Link_Cooking.jpg'>";
+                }
+                else {
+                  result = "";
+                }
+                $( ".result" ).append(result);
+              });
+
             });
         })();
       </script>
