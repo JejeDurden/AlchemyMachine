@@ -1,17 +1,17 @@
 {
   "Ingredients":[
-        {"text": "Hylian Rice", "quantity": 7},
-        {"text": "Hylian Shroom", "quantity": 2},
-        {"text": "Hyrule Bass", "quantity": 3},
-        {"text": "Keese Wing", "quantity": 2},
-        {"text": "Ironshroom", "quantity": 5},
-        {"text": "Sneaky River Snail", "quantity": 2},
-        {"text": "Swift Carrot", "quantity": 4},
-        {"text": "Goat Butter", "quantity": 6},
-        {"text": "Octo Balloon", "quantity": 7},
-        {"text": "Raw Gourmet Meat", "quantity": 3},
-        {"text": "Hearty Truffle", "quantity": 5},
-        {"text": "Goron Spice", "quantity": 4}
+        {"name": "Hylian Rice", "quantity": 7},
+        {"name": "Hylian Shroom", "quantity": 2},
+        {"name": "Hyrule Bass", "quantity": 3},
+        {"name": "Keese Wing", "quantity": 2},
+        {"name": "Ironshroom", "quantity": 5},
+        {"name": "Sneaky River Snail", "quantity": 2},
+        {"name": "Swift Carrot", "quantity": 4},
+        {"name": "Goat Butter", "quantity": 6},
+        {"name": "Octo Balloon", "quantity": 7},
+        {"name": "Raw Gourmet Meat", "quantity": 3},
+        {"name": "Hearty Truffle", "quantity": 5},
+        {"name": "Goron Spice", "quantity": 4}
 ],
 "Dishes":[
         {"name": "Gourmet Meat and Rice Bowl", "ingredients": ["Raw Gourmet Meat","Hylian Rice","Goat Butter"], "quantity" : 0},
@@ -20,6 +20,7 @@
         {"name": "Weird Monster Potion", "ingredients": ["Keese Wing","Octo Balloon","Sneaky River Snail"], "quantity" : 0},
         {"name": "Hearty Swift Bass", "ingredients": ["Hearty Truffle","Swift Carrot","Hyrule Bass"], "quantity" : 0},
         {"name": "Meat and shrooms", "ingredients": ["Raw Gourmet Meat","Hearty Truffle","Hylian Shroom"], "quantity" : 0},
+        {"name": "Hylian Meal", "ingredients": ["Hylian Rice","Hyrule Bass","Hylian Shroom"], "quantity" : 0},
         {"name": "Dubious Food", "ingredients": [], "quantity" : 0}
 ]
 }

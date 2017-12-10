@@ -2,37 +2,44 @@
   <html>
     <head>
       <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous">
+      </script>
       <title>The Zelda Food Machine</title>
     </head>
     <body>
       <div class="upper"></div>
       <h1>The Zelda Food Machine</h1>
-      <div class="ingredients">
+      <div>
         <form action="/cook" method="POST">
           <p>Please choose 3 ingredients to try to make a dish</p>
-          <div>
-            <p>
-               <input type="checkbox">
-               <label for="test1">Rouge</label>
-            </p>
-            <p>
-               <input type="checkbox" id="test2">
-               <label for="test2">Jaune</label>
-            </p>
-            <p>
-               <input type="checkbox" id="test3">
-               <label for="test3">Vert</label>
-            </p>
-            <p>
-               <input type="checkbox" id="test4">
-               <label for="test4">Marron</label>
-            </p>
+          <div class="ingredients">
           </div>
           <div>
             <button type="submit">Let's Cook !</button>
           </div>
         </form>
       </div>
+
+      <script>
+        (function() {
+          var dataURL = "/data";
+          $.getJSON( dataURL, {
+            tags: "mount rainier",
+            tagmode: "any",
+            format: "json"
+          })
+            .done(function(data) {
+              console.log(data);
+              $.each( data.Ingredients, function( i, item ) {
+                ingredient = item.name;
+                button = "<p><input type='checkbox' name='ingredient' value='" + ingredient +"'><label for='" + ingredient + "'>" + ingredient +"</label></p>";
+                $( ".ingredients" ).append(button);
+              });
+            });
+        })();
+      </script>
 
     </body>
   </html>
