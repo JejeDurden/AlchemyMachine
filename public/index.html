@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      <title>The Zelda Food Machine</title>
+    </head>
+    <body>
+      <div class="upper"></div>
+      <h1>The Zelda Food Machine</h1>
+      <div class="ingredients">
+        <form action="/cook" method="POST">
+          <p>Please choose 3 ingredients to try to make a dish</p>
+          <div>
+            <p>
+               <input type="checkbox">
+               <label for="test1">Rouge</label>
+            </p>
+            <p>
+               <input type="checkbox" id="test2">
+               <label for="test2">Jaune</label>
+            </p>
+            <p>
+               <input type="checkbox" id="test3">
+               <label for="test3">Vert</label>
+            </p>
+            <p>
+               <input type="checkbox" id="test4">
+               <label for="test4">Marron</label>
+            </p>
+          </div>
+          <div>
+            <button type="submit">Let's Cook !</button>
+          </div>
+        </form>
+      </div>
+
+    </body>
+  </html>
