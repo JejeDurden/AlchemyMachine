@@ -1,4 +1,4 @@
-# AlchemyMachine inspired by Zelda, Breathe of the wild
+# AlchemyMachine inspired by Zelda, Breath of the wild
 
 Quick start :
 ```npm install && node app.js```
